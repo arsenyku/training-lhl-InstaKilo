@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		1217CBA31BA0A9CF002E98F2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1217CBA21BA0A9CF002E98F2 /* main.m */; };
-		1217CBA61BA0A9CF002E98F2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1217CBA51BA0A9CF002E98F2 /* AppDelegate.m */; };
-		1217CBA91BA0A9CF002E98F2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1217CBA81BA0A9CF002E98F2 /* ViewController.m */; };
+		1217CBA61BA0A9CF002E98F2 /* IKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1217CBA51BA0A9CF002E98F2 /* IKAppDelegate.m */; };
+		1217CBA91BA0A9CF002E98F2 /* IKPhotoGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1217CBA81BA0A9CF002E98F2 /* IKPhotoGridViewController.m */; };
 		1217CBAC1BA0A9CF002E98F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1217CBAA1BA0A9CF002E98F2 /* Main.storyboard */; };
 		1217CBAE1BA0A9CF002E98F2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1217CBAD1BA0A9CF002E98F2 /* Images.xcassets */; };
 		1217CBB11BA0A9CF002E98F2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1217CBAF1BA0A9CF002E98F2 /* LaunchScreen.xib */; };
 		1217CBBD1BA0A9CF002E98F2 /* InstaKiloTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1217CBBC1BA0A9CF002E98F2 /* InstaKiloTests.m */; };
+		1217CBC81BA0CADA002E98F2 /* IKPhotoCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1217CBC71BA0CADA002E98F2 /* IKPhotoCellView.m */; };
+		1217CBCB1BA0D161002E98F2 /* IKPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 1217CBCA1BA0D161002E98F2 /* IKPhoto.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,16 +32,20 @@
 		1217CB9D1BA0A9CF002E98F2 /* InstaKilo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaKilo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1217CBA11BA0A9CF002E98F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1217CBA21BA0A9CF002E98F2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		1217CBA41BA0A9CF002E98F2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		1217CBA51BA0A9CF002E98F2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		1217CBA71BA0A9CF002E98F2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		1217CBA81BA0A9CF002E98F2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		1217CBA41BA0A9CF002E98F2 /* IKAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IKAppDelegate.h; sourceTree = "<group>"; };
+		1217CBA51BA0A9CF002E98F2 /* IKAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IKAppDelegate.m; sourceTree = "<group>"; };
+		1217CBA71BA0A9CF002E98F2 /* IKPhotoGridViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IKPhotoGridViewController.h; sourceTree = "<group>"; };
+		1217CBA81BA0A9CF002E98F2 /* IKPhotoGridViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IKPhotoGridViewController.m; sourceTree = "<group>"; };
 		1217CBAB1BA0A9CF002E98F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1217CBAD1BA0A9CF002E98F2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1217CBB01BA0A9CF002E98F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		1217CBB61BA0A9CF002E98F2 /* InstaKiloTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstaKiloTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1217CBBB1BA0A9CF002E98F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1217CBBC1BA0A9CF002E98F2 /* InstaKiloTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstaKiloTests.m; sourceTree = "<group>"; };
+		1217CBC61BA0CADA002E98F2 /* IKPhotoCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IKPhotoCellView.h; sourceTree = "<group>"; };
+		1217CBC71BA0CADA002E98F2 /* IKPhotoCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKPhotoCellView.m; sourceTree = "<group>"; };
+		1217CBC91BA0D161002E98F2 /* IKPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IKPhoto.h; sourceTree = "<group>"; };
+		1217CBCA1BA0D161002E98F2 /* IKPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKPhoto.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,10 +87,14 @@
 		1217CB9F1BA0A9CF002E98F2 /* InstaKilo */ = {
 			isa = PBXGroup;
 			children = (
-				1217CBA41BA0A9CF002E98F2 /* AppDelegate.h */,
-				1217CBA51BA0A9CF002E98F2 /* AppDelegate.m */,
-				1217CBA71BA0A9CF002E98F2 /* ViewController.h */,
-				1217CBA81BA0A9CF002E98F2 /* ViewController.m */,
+				1217CBA41BA0A9CF002E98F2 /* IKAppDelegate.h */,
+				1217CBA51BA0A9CF002E98F2 /* IKAppDelegate.m */,
+				1217CBC61BA0CADA002E98F2 /* IKPhotoCellView.h */,
+				1217CBC71BA0CADA002E98F2 /* IKPhotoCellView.m */,
+				1217CBA71BA0A9CF002E98F2 /* IKPhotoGridViewController.h */,
+				1217CBA81BA0A9CF002E98F2 /* IKPhotoGridViewController.m */,
+				1217CBC91BA0D161002E98F2 /* IKPhoto.h */,
+				1217CBCA1BA0D161002E98F2 /* IKPhoto.m */,
 				1217CBAA1BA0A9CF002E98F2 /* Main.storyboard */,
 				1217CBAD1BA0A9CF002E98F2 /* Images.xcassets */,
 				1217CBAF1BA0A9CF002E98F2 /* LaunchScreen.xib */,
@@ -219,9 +229,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1217CBA91BA0A9CF002E98F2 /* ViewController.m in Sources */,
-				1217CBA61BA0A9CF002E98F2 /* AppDelegate.m in Sources */,
+				1217CBA91BA0A9CF002E98F2 /* IKPhotoGridViewController.m in Sources */,
+				1217CBC81BA0CADA002E98F2 /* IKPhotoCellView.m in Sources */,
+				1217CBA61BA0A9CF002E98F2 /* IKAppDelegate.m in Sources */,
 				1217CBA31BA0A9CF002E98F2 /* main.m in Sources */,
+				1217CBCB1BA0D161002E98F2 /* IKPhoto.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
