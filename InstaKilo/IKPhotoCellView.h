@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol IKPhotoData <NSObject>
+-(NSString*)imageName;
+-(NSString*)location;
+-(NSString*)subject;
+@end
+
 @interface IKPhotoCellView : UICollectionViewCell
--(void)setContent:(id)content;
+-(void)setContent:(id<IKPhotoData>)content;
 @end

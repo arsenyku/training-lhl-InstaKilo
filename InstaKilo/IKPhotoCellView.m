@@ -8,12 +8,6 @@
 
 #import "IKPhotoCellView.h"
 
-@protocol IKPhotoData <NSObject>
--(NSString*)imageName;
--(NSString*)location;
--(NSString*)subject;
-@end
-
 @interface IKPhotoCellView()
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @end

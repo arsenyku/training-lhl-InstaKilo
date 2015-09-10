@@ -16,6 +16,9 @@
 		1217CBBD1BA0A9CF002E98F2 /* InstaKiloTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1217CBBC1BA0A9CF002E98F2 /* InstaKiloTests.m */; };
 		1217CBC81BA0CADA002E98F2 /* IKPhotoCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1217CBC71BA0CADA002E98F2 /* IKPhotoCellView.m */; };
 		1217CBCB1BA0D161002E98F2 /* IKPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 1217CBCA1BA0D161002E98F2 /* IKPhoto.m */; };
+		1217CBD11BA0E8EA002E98F2 /* NSArray+sectionedDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 1217CBD01BA0E8EA002E98F2 /* NSArray+sectionedDictionary.m */; };
+		1217CBD41BA101EC002E98F2 /* IKCollectionSectionTitle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1217CBD31BA101EC002E98F2 /* IKCollectionSectionTitle.m */; };
+		1217CBD71BA129A9002E98F2 /* NSDictionary+sortedKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = 1217CBD61BA129A9002E98F2 /* NSDictionary+sortedKeys.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +49,12 @@
 		1217CBC71BA0CADA002E98F2 /* IKPhotoCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKPhotoCellView.m; sourceTree = "<group>"; };
 		1217CBC91BA0D161002E98F2 /* IKPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IKPhoto.h; sourceTree = "<group>"; };
 		1217CBCA1BA0D161002E98F2 /* IKPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKPhoto.m; sourceTree = "<group>"; };
+		1217CBCF1BA0E8EA002E98F2 /* NSArray+sectionedDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+sectionedDictionary.h"; sourceTree = "<group>"; };
+		1217CBD01BA0E8EA002E98F2 /* NSArray+sectionedDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+sectionedDictionary.m"; sourceTree = "<group>"; };
+		1217CBD21BA101EC002E98F2 /* IKCollectionSectionTitle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IKCollectionSectionTitle.h; sourceTree = "<group>"; };
+		1217CBD31BA101EC002E98F2 /* IKCollectionSectionTitle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKCollectionSectionTitle.m; sourceTree = "<group>"; };
+		1217CBD51BA129A9002E98F2 /* NSDictionary+sortedKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+sortedKeys.h"; sourceTree = "<group>"; };
+		1217CBD61BA129A9002E98F2 /* NSDictionary+sortedKeys.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+sortedKeys.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,10 +100,16 @@
 				1217CBA51BA0A9CF002E98F2 /* IKAppDelegate.m */,
 				1217CBC61BA0CADA002E98F2 /* IKPhotoCellView.h */,
 				1217CBC71BA0CADA002E98F2 /* IKPhotoCellView.m */,
+				1217CBD21BA101EC002E98F2 /* IKCollectionSectionTitle.h */,
+				1217CBD31BA101EC002E98F2 /* IKCollectionSectionTitle.m */,
 				1217CBA71BA0A9CF002E98F2 /* IKPhotoGridViewController.h */,
 				1217CBA81BA0A9CF002E98F2 /* IKPhotoGridViewController.m */,
 				1217CBC91BA0D161002E98F2 /* IKPhoto.h */,
 				1217CBCA1BA0D161002E98F2 /* IKPhoto.m */,
+				1217CBCF1BA0E8EA002E98F2 /* NSArray+sectionedDictionary.h */,
+				1217CBD01BA0E8EA002E98F2 /* NSArray+sectionedDictionary.m */,
+				1217CBD51BA129A9002E98F2 /* NSDictionary+sortedKeys.h */,
+				1217CBD61BA129A9002E98F2 /* NSDictionary+sortedKeys.m */,
 				1217CBAA1BA0A9CF002E98F2 /* Main.storyboard */,
 				1217CBAD1BA0A9CF002E98F2 /* Images.xcassets */,
 				1217CBAF1BA0A9CF002E98F2 /* LaunchScreen.xib */,
@@ -232,8 +247,11 @@
 				1217CBA91BA0A9CF002E98F2 /* IKPhotoGridViewController.m in Sources */,
 				1217CBC81BA0CADA002E98F2 /* IKPhotoCellView.m in Sources */,
 				1217CBA61BA0A9CF002E98F2 /* IKAppDelegate.m in Sources */,
+				1217CBD71BA129A9002E98F2 /* NSDictionary+sortedKeys.m in Sources */,
+				1217CBD41BA101EC002E98F2 /* IKCollectionSectionTitle.m in Sources */,
 				1217CBA31BA0A9CF002E98F2 /* main.m in Sources */,
 				1217CBCB1BA0D161002E98F2 /* IKPhoto.m in Sources */,
+				1217CBD11BA0E8EA002E98F2 /* NSArray+sectionedDictionary.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
