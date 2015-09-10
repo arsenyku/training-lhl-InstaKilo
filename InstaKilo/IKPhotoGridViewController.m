@@ -19,6 +19,7 @@
 @property(nonatomic) NSDictionary *photosBySubject;
 @property(nonatomic) BOOL sortByLocation;
 
+@property(nonatomic, readonly) NSDictionary *groupedPhotos;
 @end
 
 @implementation IKPhotoGridViewController
@@ -60,12 +61,9 @@
 
 #pragma mark - <UICollectionViewDataSource>
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    NSDictionary *photos = self.photosBySubject;
-    if (self.sortByLocation)
-        photos = self.photosByLocation;
     
-    id sectionKey = [photos sortedKeys][section];
-    NSArray *photosForKey = photos[sectionKey];
+    id sectionKey = [self.groupedPhotos sortedKeys][section];
+    NSArray *photosForKey = self.groupedPhotos[sectionKey];
     return [photosForKey count];
 }
 
@@ -73,22 +71,15 @@
 // -dequeueReusableCellWithReuseIdentifier:forIndexPath:
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView
                   cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    NSDictionary *photos = self.photosBySubject;
-    if (self.sortByLocation)
-        photos = self.photosByLocation;
-    
     IKPhotoCellView *cell = (IKPhotoCellView*)[collectionView dequeueReusableCellWithReuseIdentifier:@"photo" forIndexPath:indexPath];
-    id sectionKey = [photos sortedKeys][indexPath.section];
-    IKPhoto *photo = photos[sectionKey][indexPath.row];
+    id sectionKey = [self.groupedPhotos sortedKeys][indexPath.section];
+    IKPhoto *photo = self.groupedPhotos[sectionKey][indexPath.row];
     [cell setContent:(id<IKPhotoData>)photo];
     return cell;
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
-    if (self.sortByLocation)
-        return [self.photosByLocation count];
-    else
-	    return [self.photosBySubject count];
+    return [self.groupedPhotos count];
 }
 
 -(UICollectionReusableView *)collectionView:(UICollectionView *)collectionView
@@ -99,12 +90,8 @@
     [collectionView dequeueReusableSupplementaryViewOfKind:kind
                                        withReuseIdentifier:@"sectionTitle"
                                               forIndexPath:indexPath];
-   
-    NSDictionary *photos = self.photosBySubject;
-    if(self.sortByLocation)
-        photos = self.photosByLocation;
-    
-    NSString *sectionTitle = [photos sortedKeys][indexPath.section];
+
+    NSString *sectionTitle = [self.groupedPhotos sortedKeys][indexPath.section];
     if ([sectionTitle isKindOfClass:[NSNull class]]){
         sectionTitle = @"No set location";
     }
@@ -118,6 +105,13 @@
 
 -(void)refresh{
     [self.photoCollectionView reloadData];
+}
+
+-(NSDictionary*)groupedPhotos{
+    if (self.sortByLocation)
+        return self.photosByLocation;
+    else
+        return self.photosBySubject;
 }
 
 
