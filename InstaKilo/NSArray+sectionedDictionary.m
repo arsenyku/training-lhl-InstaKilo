@@ -28,11 +28,14 @@
         [((NSMutableArray*)dictionary[key]) addObject:item];
     }
     
+    // Replace mutable arrays with immutable copies.
     for (id sectionKey in [dictionary allKeys]) {
         NSMutableArray *section = dictionary[sectionKey];
         dictionary[sectionKey] = [section copy];
     }
     
+    // If all elements of original array respond to the given selector,
+    // we can remove the section with a NSNull key.
     if ([dictionary[ [NSNull null] ] count] < 1)
         [dictionary removeObjectForKey:[NSNull null]];
     

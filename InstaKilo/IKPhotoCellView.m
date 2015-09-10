@@ -14,8 +14,7 @@
 
 @implementation IKPhotoCellView
 
--(void)setContent:(id)content{
-    id<IKPhotoData> photo = content;
-    self.imageView.image = [UIImage imageNamed:photo.imageName];
+-(void)setContent:(id<IKPhotoData>)content{
+    self.imageView.image = [UIImage imageNamed:content.imageName];
 }
 @end

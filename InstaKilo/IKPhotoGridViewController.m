@@ -17,8 +17,9 @@
 @property (weak, nonatomic) IBOutlet UICollectionView *photoCollectionView;
 @property(nonatomic) NSDictionary *photosByLocation;
 @property(nonatomic) NSDictionary *photosBySubject;
-@property(nonatomic) BOOL sortByLocation;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *sortTypeSegment;
 
+@property(nonatomic,readonly) BOOL sortByLocation;
 @property(nonatomic, readonly) NSDictionary *groupedPhotos;
 @end
 
@@ -27,6 +28,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
     NSArray *photos = @[
                     [IKPhoto photoWithImageName:@"IMG1" location:@"AAAAA" subject:@"S4"],
                     [IKPhoto photoWithImageName:@"IMG2" location:@"AAAAA" subject:@"S2"],
@@ -34,7 +36,7 @@
                     [IKPhoto photoWithImageName:@"IMG4" location:@"BBBBB" subject:@"S4"],
                     [IKPhoto photoWithImageName:@"IMG5" location:@"BBBBB" subject:@"S1"],
                     [IKPhoto photoWithImageName:@"IMG6" location:@"BBBBB" subject:@"S2"],
-                    [IKPhoto photoWithImageName:@"IMG7" location:@"CCCCC" subject:@"S3"],
+                    [IKPhoto photoWithImageName:@"IMG7" location:@"CCCCC" subject:@"S2"],
                     [IKPhoto photoWithImageName:@"IMG8" location:@"CCCCC" subject:@"S4"],
                     [IKPhoto photoWithImageName:@"IMG9" location:@"DDDDD" subject:@"S1"],
                     [IKPhoto photoWithImageName:@"IMG10" location:@"DDDDD" subject:@"S2"]
@@ -42,8 +44,6 @@
     
     self.photosByLocation = [photos dataSectionedBySelector:@selector(location)];
     self.photosBySubject = [photos dataSectionedBySelector:@selector(subject)];
-    
-    self.sortByLocation = YES;
     
 }
 
@@ -55,9 +55,10 @@
 #pragma mark - events from controls
 
 - (IBAction)segmentValueChanged:(UISegmentedControl*)sender {
-    self.sortByLocation = (sender.selectedSegmentIndex == 0);
     [self refresh];
 }
+
+
 
 #pragma mark - <UICollectionViewDataSource>
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
@@ -93,7 +94,7 @@
 
     NSString *sectionTitle = [self.groupedPhotos sortedKeys][indexPath.section];
     if ([sectionTitle isKindOfClass:[NSNull class]]){
-        sectionTitle = @"No set location";
+        sectionTitle = @"No location";
     }
     
     [sectionTitleView setSectionTitle:sectionTitle];
@@ -114,5 +115,8 @@
         return self.photosBySubject;
 }
 
+-(BOOL)sortByLocation{
+    return (self.sortTypeSegment.selectedSegmentIndex == 0);
+}
 
 @end

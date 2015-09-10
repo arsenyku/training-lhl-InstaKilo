@@ -101,6 +101,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="photoCollectionView" destination="s89-Gi-fh0" id="MXa-uY-eQI"/>
+                        <outlet property="sortTypeSegment" destination="RqE-hV-0CS" id="RpY-FY-BHO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
